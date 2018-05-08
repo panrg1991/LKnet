@@ -28,16 +28,10 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
       'jquery': 'jquery' 
     }
   },
-   plugins: [
-        new webpack.ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery",
-          "windows.jQuery": "jquery"
-        })
-    ],
   module: {
     rules: [
       {
@@ -73,7 +67,8 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {test: /\.less$/, loader: 'style!css!less'},
     ]
   },
   node: {
@@ -87,5 +82,12 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  }
+  },
+  plugins: [
+        new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery",
+          "window.jQuery": "jquery"
+        })
+    ]
 }

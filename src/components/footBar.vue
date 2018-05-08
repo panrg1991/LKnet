@@ -50,7 +50,6 @@
   },
   methods:{
   	active:function(item){
-      // console.log(item.path);
      this.inss=item.path
       }
   },

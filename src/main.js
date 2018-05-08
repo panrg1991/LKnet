@@ -3,9 +3,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/js/bootstrap.min.js'
 import '@/assets/css/font-awesome.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import './assets/css/bootstrap.min.css'  
+import './assets/js/bootstrap.min'
+// import * as uiv from 'uiv'
+// Vue.use(uiv)
 
 
 //highcharts的引入
